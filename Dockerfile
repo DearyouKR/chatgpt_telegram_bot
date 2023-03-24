@@ -17,4 +17,6 @@ WORKDIR /code
 
 RUN pip3 install -r requirements.txt
 
-CMD ["bash"]
+EXPOSE 8000
+
+CMD ["python", "./bot/bot.py", "runserver", "0.0.0.0:8000"]
